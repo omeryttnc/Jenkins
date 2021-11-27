@@ -6,4 +6,9 @@ public class deneme1 {
         System.out.println("Hello World");
         System.out.println("sss");
     }
+
+    @Test
+    public void testName() {
+        System.out.println("a");
+    }
 }
