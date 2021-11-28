@@ -1,7 +1,7 @@
 import org.testng.annotations.Test;
 
 public class Deneme2Test {
-    @Test(groups = "smoke")
+    @Test
     public void print() {
         System.out.println("Hello World");
         System.out.println("sss");
