@@ -9,6 +9,6 @@ public class Deneme2Test {
 
     @Test(groups = "smoke")
     public void testName() {
-        System.out.println("a");
+        System.out.println("smoke 1");
     }
 }
