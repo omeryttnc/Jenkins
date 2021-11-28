@@ -1,6 +1,6 @@
 import org.testng.annotations.Test;
 
-public class deneme1 {
+public class DenemeTest {
     @Test(groups = "smoke")
     public void print() {
         System.out.println("Hello World");

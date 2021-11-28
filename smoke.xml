@@ -9,8 +9,8 @@
             </run>
         </groups>
         <classes>
-            <class name="deneme1"/>
-            <class name="l">
+            <class name="DenemeTest"/>
+            <class name="Deneme2Test">
 
 
             </class>
