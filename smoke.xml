@@ -10,6 +10,7 @@
         </groups>
         <classes>
             <class name="Deneme2Test"/>
+            <class name="Deneme3Test"/>
             <class name="DenemeTest">
 
 
