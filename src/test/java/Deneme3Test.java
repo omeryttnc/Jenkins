@@ -6,6 +6,5 @@ public class Deneme3Test {
     public void name(){
         System.out.println("regression testi");
         System.out.println("s");
-        Assert.fail();
     }
 }

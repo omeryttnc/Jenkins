@@ -14,7 +14,7 @@ public class DenemeTest {
         System.out.println("smoke 3");
     }
 
-    @Test(groups = "smoke")
+    @Test(groups = "regression")
     public void testDriver() {
 
         Driver.getDriver().get("https://stackoverflow.com/");
