@@ -26,7 +26,7 @@ public class Deneme4Test {
 
         driver.get("https://stackoverflow.com/");
 
-        Thread.sleep(50000);  // Let the user actually see something!
+        Thread.sleep(600000);  // Let the user actually see something!
         String currentUrl = driver.getCurrentUrl();
         Assert.assertEquals(currentUrl, "https://stackoverflow.com/");
 
