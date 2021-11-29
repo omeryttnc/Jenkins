@@ -13,9 +13,10 @@ public class Deneme3Test {
 
     @Test(groups = "regression")
     public void testGoogleSearch() throws InterruptedException {
-
+//        System.setProperty("webdriver.chrome.driver",
+//                "C:\\Downloads\\chromedriver.exe");
         // Optional. If not specified, WebDriver searches the PATH for chromedriver.
-         System.setProperty("webdriver.chrome.driver", "C:/Users/savsa/Desktop/chromedriver_win32/chromedriver.exe");
+         System.setProperty("webdriver.chrome.driver", "C:\\Users\\savsa\\Desktop\\chromedriver_win32\\chromedriver.exe");
          WebDriver driver = new ChromeDriver();
 
 
