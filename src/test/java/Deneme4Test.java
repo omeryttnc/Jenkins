@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import utilities.BaseDriver;
+import utilities.Driver;
 
 public class Deneme4Test {
     WebDriver driver;
@@ -21,14 +22,13 @@ public class Deneme4Test {
         Thread.sleep(5000);  // Let the user actually see something!
 
 
-        BaseDriver.getDriver().get("https://stackoverflow.com/");
+        Driver.getDriver().get("https://stackoverflow.com/");
 
-        Thread.sleep(600000);  // Let the user actually see something!
-        String currentUrl = BaseDriver.getDriver().getCurrentUrl();
+        Thread.sleep(5000);  // Let the user actually see something!
+        String currentUrl = Driver.getDriver().getCurrentUrl();
         Assert.assertEquals(currentUrl, "https://stackoverflow.com/");
 
-        Thread.sleep(50000);  // Let the user actually see something!
+        Thread.sleep(5000);  // Let the user actually see something!
 
-        driver.quit();
     }
 }
