@@ -26,7 +26,7 @@ public class DenemeTest {
     public void testDriver() {
 
         Driver.getDriver().get("https://stackoverflow.com/");
-        wait(10);
+        wait(100);
         String currentUrl = Driver.getDriver().getCurrentUrl();
         Assert.assertEquals(currentUrl, "https://stackoverflow.com/");
         Driver.closeDriver();
@@ -39,7 +39,7 @@ public class DenemeTest {
     public void testBase() {
 
         BaseDriver.getDriver().get("https://stackoverflow.com/");
-        wait(10);
+        wait(100);
         String currentUrl = BaseDriver.getDriver().getCurrentUrl();
         Assert.assertEquals(currentUrl, "https://stackoverflow.com/");
         BaseDriver.DriverQuit();
