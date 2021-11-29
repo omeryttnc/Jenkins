@@ -11,6 +11,7 @@
         <classes>
             <class name="Deneme2Test"/>
             <class name="Deneme3Test"/>
+            <class name="Deneme4Test"/>
             <class name="DenemeTest">
 
 
