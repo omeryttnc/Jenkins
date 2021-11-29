@@ -11,7 +11,7 @@ public class Deneme3Test {
         System.out.println("s");
     }
 
-    @Test(groups = "regression")
+    @Test
     public void testGoogleSearch() throws InterruptedException {
 //        System.setProperty("webdriver.chrome.driver",
 //                "C:\\Downloads\\chromedriver.exe");
