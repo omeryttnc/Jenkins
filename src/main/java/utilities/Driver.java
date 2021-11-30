@@ -52,7 +52,7 @@ public class Driver {
             }
         }
         driver.get().manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-        waitForPageToLoad(100);
+        waitForPageToLoad(200);
         //driver.get().manage().window().maximize();
         return driver.get();
 

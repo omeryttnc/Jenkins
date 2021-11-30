@@ -28,12 +28,12 @@ BaseDriver.threadBrowserName.get();
         String currentUrl = BaseDriver.getDriver().getCurrentUrl();
         Assert.assertEquals(currentUrl, "https://stackoverflow.com/");
 
-        Thread.sleep(5000);  // Let the user actually see something!
 
     }
 
     @Test(groups = "regression")
-    public void testDriver()  {
+    public void testDriver() throws InterruptedException {
+        Thread.sleep(5000);  // Let the user actually see something!
 
         Driver.getDriver().get("https://stackoverflow.com/");
         try {
