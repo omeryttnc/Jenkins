@@ -16,7 +16,7 @@ public class Deneme4Test {
 
 
 
-    @Test(groups = "regression")
+    @Test
     public void testName() throws InterruptedException {
 
         Thread.sleep(5000);  // Let the user actually see something!
