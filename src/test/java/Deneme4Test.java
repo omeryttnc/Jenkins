@@ -21,14 +21,33 @@ public class Deneme4Test {
 
         Thread.sleep(5000);  // Let the user actually see something!
 
-
-        Driver.getDriver().get("https://stackoverflow.com/");
+BaseDriver.threadBrowserName.get();
+        BaseDriver.getDriver().get("https://stackoverflow.com/");
 
         Thread.sleep(5000);  // Let the user actually see something!
-        String currentUrl = Driver.getDriver().getCurrentUrl();
+        String currentUrl = BaseDriver.getDriver().getCurrentUrl();
         Assert.assertEquals(currentUrl, "https://stackoverflow.com/");
 
         Thread.sleep(5000);  // Let the user actually see something!
 
+    }
+
+    @Test(groups = "regression")
+    public void testDriver()  {
+
+        Driver.getDriver().get("https://stackoverflow.com/");
+        try {
+            Thread.sleep(5000);  // Let the user actually see something!
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        String currentUrl = Driver.getDriver().getCurrentUrl();
+        Assert.assertEquals(currentUrl, "https://stackoverflow.com/");
+
+        try {
+            Thread.sleep(5000);  // Let the user actually see something!
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
