@@ -53,7 +53,7 @@ public class Driver {
         }
         waitForPageToLoad(100);
         driver.get().manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-        driver.get().manage().window().maximize();
+        //driver.get().manage().window().maximize();
         return driver.get();
 
     }
