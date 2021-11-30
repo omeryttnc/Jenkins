@@ -51,8 +51,8 @@ public class Driver {
                     break;
             }
         }
-        waitForPageToLoad(100);
         driver.get().manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+        waitForPageToLoad(100);
         //driver.get().manage().window().maximize();
         return driver.get();
 
