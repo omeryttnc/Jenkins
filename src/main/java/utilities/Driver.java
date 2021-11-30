@@ -1,12 +1,15 @@
 package utilities;
 
 import io.github.bonigarcia.wdm.*;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -48,10 +51,24 @@ public class Driver {
                     break;
             }
         }
+        waitForPageToLoad(100);
         driver.get().manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
         driver.get().manage().window().maximize();
         return driver.get();
 
+    }
+    public static void waitForPageToLoad(long timeOutInSeconds) {
+        ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver driver) {
+                return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
+            }
+        };
+        try {
+            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeOutInSeconds);
+            wait.until(expectation);
+        } catch (Exception error) {
+            error.printStackTrace();
+        }
     }
     public static void closeDriver(){
         driver.get().close();
