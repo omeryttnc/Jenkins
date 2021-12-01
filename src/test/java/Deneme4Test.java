@@ -33,21 +33,28 @@ BaseDriver.threadBrowserName.get();
 
     @Test(groups = "regression")
     public void testDriver() throws InterruptedException {
+        System.out.println("1");
         Thread.sleep(5000);  // Let the user actually see something!
+        System.out.println("2");
 
         Driver.getDriver().get("https://stackoverflow.com/");
+        System.out.println("3");
         try {
             Thread.sleep(5000);  // Let the user actually see something!
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        System.out.println("4");
         String currentUrl = Driver.getDriver().getCurrentUrl();
+        System.out.println("5");
         Assert.assertEquals(currentUrl, "https://stackoverflow.com/");
+        System.out.println("6");
 
         try {
             Thread.sleep(5000);  // Let the user actually see something!
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        System.out.println("7");
     }
 }
