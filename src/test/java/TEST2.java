@@ -10,7 +10,7 @@ public class TEST2 {
 
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void test() {
         WriteToTxt.saveTitle("fille","icerik");
     }
