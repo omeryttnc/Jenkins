@@ -7,4 +7,11 @@ public class TEST1 {
         Assertions.fail("test 1");
 
     }
+
+    @Test
+    void name() {
+
+
+
+    }
 }
